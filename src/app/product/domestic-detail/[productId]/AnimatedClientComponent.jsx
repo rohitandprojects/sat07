@@ -275,7 +275,7 @@ const AnimatedClientComponent = ({ post, matchCateName, getAllPost }) => {
               //console.log('iniFlag:- timer3 true');
               return () => clearTimeout(timer3);
             }
-          }, 4500);
+          }, 3000);
         }
         else{
           routers.push(`/product/domestic-detail/${getAllPost[0]?.id}`);
@@ -286,7 +286,7 @@ const AnimatedClientComponent = ({ post, matchCateName, getAllPost }) => {
               //console.log('iniFlag:- timer4 true');
               return () => clearTimeout(timer4);
             }
-          }, 4500);
+          }, 3000);
         }
         
         //console.log(nextCategory);

@@ -129,7 +129,7 @@ const AnimatedClientComponentInter = ({ post, matchCateName, getAllPost }) => {
         const scrollTriggerProps = {
           trigger: element,
           start:'top bottom',
-        end:'bottom 80%',
+          end:'bottom 80%',
           scrub: true,
           markers:false,
         };
@@ -275,7 +275,7 @@ const AnimatedClientComponentInter = ({ post, matchCateName, getAllPost }) => {
             //console.log('iniFlag:- timer3 true');
             return () => clearTimeout(timer3);
           }
-        }, 4500);
+        }, 3000);
       }
       else{
         routers.push(`/product/international-detail/${getAllPost[0]?.id}`);
@@ -286,7 +286,7 @@ const AnimatedClientComponentInter = ({ post, matchCateName, getAllPost }) => {
             //console.log('iniFlag:- timer4 true');
             return () => clearTimeout(timer4);
           }
-        }, 4500);
+        }, 3000);
       }
       
       //console.log(nextCategory);

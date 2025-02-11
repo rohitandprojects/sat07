@@ -2,13 +2,18 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+  
 gsap.registerPlugin(ScrollTrigger);
-const ListingLoading = () => {
+  const ListingLoading = () => {
+  const initializedLoding = useRef(false);
   const renctangleRef = useRef(null);
   const seeToScrollRef = useRef(null);
   const loadingRef = useRef(null);  
 
   useEffect(() => {
+    if(!initializedLoding.current){
+      initializedLoding.current = true;
+      setTimeout(function(){
         let proLoadDiv = document.querySelector('.product-loader');
         if(proLoadDiv){
           let compStyles = window.getComputedStyle(proLoadDiv);
@@ -62,9 +67,11 @@ const ListingLoading = () => {
           { height: '100%', duration:2, ease: "power1.out" }
           );
         } 
+      },1000);
         return () => {
           ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
         };
+      }
   },[]);  
   return (<div>
     <div className="product-loader_bar">
