@@ -1,0 +1,8 @@
+@font-face {
+    font-family:'franklin_gothic_demi_condRg';
+    src: url('fradmcn-webfont.woff2') format('woff2'),
+         url('fradmcn-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display:swap
+}
